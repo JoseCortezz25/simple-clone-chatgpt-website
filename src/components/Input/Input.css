@@ -1,0 +1,28 @@
+.Input {
+  /* border: 1px solid red; */
+  margin-top: var(--mb-1);
+}
+
+.Input form {
+  width: 100%;
+  grid-template-columns: 1fr 10%;
+}
+
+.Input input {
+  background-color: var(--light-color-gray2);
+  /* width: 100%; */
+  border: none;
+  padding: var(--mb-1);
+  border-radius: var(--mb-0-5);
+  color: var(--container-color);
+}
+
+.Input input::placeholder {
+  color: var(--container-color);
+}
+
+.Input button {
+  border-radius: var(--mb-0-5);
+  background-color: var(--black-color);
+  color: var(--container-color);
+}

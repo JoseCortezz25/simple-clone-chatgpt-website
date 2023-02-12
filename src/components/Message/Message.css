@@ -1,0 +1,41 @@
+.Message {
+  display: flex;
+  place-items: center;
+  /* border-top: 0.5px solid var(--container-color);
+  border-bottom: 0.5px solid var(--container-color); */
+
+  padding: var(--mb-1-5) var(--mb-1-5);
+  text-align: start;
+  margin-bottom: var(--mb-1-5);
+}
+
+.Message p {
+  width: 90%;
+}
+.message__gpt {
+  border-left: 2px solid var(--gren-color);
+  background-color: var(--light-color-gray);
+}
+
+.message__user {
+  border-left: 2px solid blue;
+}
+
+.Icon__logo {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  min-width: 35px;
+  min-height: 35px;
+  padding: 4px;
+  border-radius: var(--mb-0-5);
+  margin-right: var(--mb-1);
+}
+
+.Icon__gpt {
+  background-color: var(--gren-color);
+}
+
+.Icon__user {
+  background-color: var(--container-color);
+}
