@@ -1,12 +1,10 @@
 .Message {
   display: flex;
   place-items: center;
-  /* border-top: 0.5px solid var(--container-color);
-  border-bottom: 0.5px solid var(--container-color); */
-
   padding: var(--mb-1-5) var(--mb-1-5);
   text-align: start;
   margin-bottom: var(--mb-1-5);
+  align-items: flex-start;
 }
 
 .Message p {

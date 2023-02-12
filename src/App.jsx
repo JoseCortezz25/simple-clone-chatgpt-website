@@ -32,22 +32,24 @@ function App() {
 
   return (
     <main className="Main">
-      <h2 className="section__title">Simple Clone ChatGPT</h2>
-      <section className="section Chat" ref={chatRef}>
-        {chatHistory.map((message, idx) => (
-          <Message
-            key={`${message.message}${idx}`}
-            text={message.message}
-            user={message.user}
-          />
-        ))}
-      </section>
-      <Input
-        handleSubmit={handleSubmit}
-        input={input}
-        setInput={setInput}
-        addMessage={addMessage}
-      />
+      <div className="container Chat__container">
+        <h2 className="section__title">Simple Clone ChatGPT Website</h2>
+        <section className="section Chat" ref={chatRef}>
+          {chatHistory.map((message, idx) => (
+            <Message
+              key={`${message.message}${idx}`}
+              text={message.message}
+              user={message.user}
+            />
+          ))}
+        </section>
+        <Input
+          handleSubmit={handleSubmit}
+          input={input}
+          setInput={setInput}
+          addMessage={addMessage}
+        />
+      </div>
     </main>
   );
 }
