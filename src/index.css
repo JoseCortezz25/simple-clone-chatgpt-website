@@ -53,6 +53,10 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+
+  --tw-ring-offset-shadow: 0 0 transparent;
+  --tw-ring-shadow: 0 0 transparent;
+  --tw-shadow: 0 0 transparent;
 }
 
 /* Responsive typography */
@@ -90,8 +94,6 @@ textarea {
 
 body {
   background-color: var(--dark-color-gray);
-  /* background-color: var(--body-color); */
-  /* color: var(--text-color); */
   color: var(--container-color);
 }
 
@@ -119,6 +121,12 @@ button {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.App {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 260px  1fr;
 }
 
 .button {
@@ -162,12 +170,10 @@ img {
 
 .section {
   padding: 6rem 0 2rem;
-  /* border: 1px solid rebeccapurple; */
 }
 
 .section__title {
   font-size: var(--h1-font-size);
-  /* color: var(--title-color); */
   color: var(--container-color);
 }
 
@@ -188,6 +194,10 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.Icon {
+  width: 35px;
 }
 
 @media screen and (max-width: 992px) {
@@ -223,6 +233,15 @@ img {
 
   .grid {
     justify-content: center;
+  }
+
+  .App {
+    width: 100%;
+    height: 100vh;
+
+    /* grid-template-columns: 1fr; */
+    display: flex;
+    flex-direction: column;
   }
 }
 

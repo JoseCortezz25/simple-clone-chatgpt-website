@@ -1,0 +1,27 @@
+.Chat {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.ChatLog {
+  width: 100%;
+  height: 85vh;
+  overflow-y: scroll;
+}
+
+@media screen and (max-width: 768px) {
+  .Chat {
+    width: 100%;
+    /* margin: auto; */
+  }
+
+  .ChatLog {
+    height: 80vh;
+    /* border: 1px solid red; */
+  }
+  .Message__content, .Input {
+    width: 90%;
+  }
+}

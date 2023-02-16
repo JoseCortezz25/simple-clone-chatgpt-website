@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
-import { Message } from "./components/Message/Message";
 import { Input } from "./components/Input/Input";
 import { getMessageByGPT } from "./services/message.js";
+import { Sidebar } from "./components/Sidebar/Sidebar";
+import Chat from "./components/Chat/Chat";
 import "./App.css";
 
 function App() {
@@ -31,25 +32,16 @@ function App() {
   };
 
   return (
-    <main className="Main">
-      <div className="container Chat__container">
-        <h2 className="section__title">Simple Clone ChatGPT Website</h2>
-        <section className="section Chat" ref={chatRef}>
-          {chatHistory.map((message, idx) => (
-            <Message
-              key={`${message.message}${idx}`}
-              text={message.message}
-              user={message.user}
-            />
-          ))}
-        </section>
+    <main className="App">
+      <Sidebar />
+      <Chat chatRef={chatRef} logs={chatHistory} >
         <Input
           handleSubmit={handleSubmit}
           input={input}
           setInput={setInput}
           addMessage={addMessage}
         />
-      </div>
+      </Chat>
     </main>
   );
 }
